@@ -44,6 +44,7 @@ Hierarchy of autonomy:
 3. Full autonomy: Completes the complete sense‑think‑act pipeline without human intervention.
 
 ## Three Core Components: Sense — Think — Act
+```mermaid
 flowchart LR
     subgraph SENSE["🔍 Sense"]
         S1[Exteroceptive Sensors<br/>Camera / LiDAR / Ultrasonic / GPS]
@@ -74,10 +75,12 @@ flowchart LR
     style SENSE fill:#cce5ff
     style THINK fill:#fff2cc
     style ACT fill:#d5e8d4
+```
     System closed‑loop mechanism:
 Physical‑world observations are captured by sensors and fed into the perception module. Following data pre‑processing, localization and map construction, processed information propagates to the decision‑making module. Computed motion trajectories are dispatched to the execution module, which drives actuators to interact with the physical environment. Updated environmental observations are recursively fed back to sensors, establishing an iterative closed‑loop workflow.
 
 ## Full‑scale System Pipeline for Mobile Robots
+```mermaid
 flowchart TD
     Mission["🎯 Mission Command (High‑level Goal)"] --> PathPlan[Path Planning]
 
@@ -98,6 +101,7 @@ flowchart TD
     style LocalMapBuild fill:#f3e5f5
     style PathPlan fill:#fff8e1
     style Actuators fill:#e8f5e9
+```
     Pipeline elaboration:
 
 1. Exteroceptive and proprioceptive sensors collect raw observational data from the physical environment.
@@ -108,6 +112,7 @@ flowchart TD
 6. The robot engages with the real‑world environment; environmental variations yield refreshed observations that are fed back to sensors to close the control loop.
 
 ## Two Distinct Technical Paradigms in Robotics Research
+```mermaid
      flowchart LR
     subgraph ClassicalAI["📐 Classical AI: Model‑based Navigation (White‑box)"]
         S1[Sensors] --> Percep[Perception]
@@ -129,6 +134,7 @@ flowchart TD
 
     style ClassicalAI fill:#e8eaf6
     style ModernAI fill:#fce4ec
+```
     - **Classical AI (Model‑driven, White‑box)**: Implements a serial modular pipeline: perception → localization & mapping → cognition & planning → motion control. This paradigm relies on explicitly hand‑formulated mathematical environmental models and affords high interpretability.
 - **Modern AI (Data‑driven, Black‑box)**: Sensor inputs are distributed across multiple parallel task‑oriented sub‑modules. Task outputs are aggregated and fused (for instance via deep‑learning architectures), with minimal dependence on manually constructed analytical environment models.
 
