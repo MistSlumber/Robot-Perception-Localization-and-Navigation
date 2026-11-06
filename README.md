@@ -1,11 +1,11 @@
 ```mermaid
 mindmap
   root((my study))
-    week1
+    task1
        Autonomous Mobile Robots: Theoretical Study on Perception‑Localization‑Navigation
-    week2
+    task2
 ```
-###week1
+###task1
 # Research on Autonomous Mobile Robot Perception, Localization and Navigation
 
 > 
